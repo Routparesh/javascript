@@ -67,14 +67,49 @@ const obj3 = {7:'q',8:'u',9:'h'}
 const obj4 = {10:'e',11:'s',22:'h'}
 
 // const obj5 = Object.assign({}, obj1, obj2, obj3, obj4)
-const obj5 = {...obj1,...obj2,...obj3,...obj4}
-console.log(obj5);
+// const obj5 = {...obj1,...obj2,...obj3,...obj4}
+// console.log(obj5);
 
-console.log(tinderUser)
-console.log(Object.keys(tinderUser))
-console.log(Object.values(tinderUser))
-console.log(Object.entries(tinderUser))
+// console.log(tinderUser)
+// console.log(Object.keys(tinderUser))
+// console.log(Object.values(tinderUser))
+// console.log(Object.entries(tinderUser))
 
 console.log(tinderUser.hasOwnProperty('id'))
 
+const course = {
+    coursename : 'Js in hindi',
+    price : 999,
+    courseInstructor: 'paresh'
+}
 
+
+const {courseInstructor} = course
+
+console.log(courseInstructor)
+
+//json
+
+{
+    "people": [
+      {
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "city": "San Francisco",
+        "state": "CA"
+      },
+      {
+        "firstName": "Bob",
+        "lastName": "Jones",
+        "city": "New York",
+        "state": "NY"
+      },
+      {
+        "firstName": "Carol",
+        "lastName": "Williams",
+        "city": null,
+        "state": null
+      }
+    ]
+  }
+  
