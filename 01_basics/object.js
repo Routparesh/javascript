@@ -89,7 +89,6 @@ const {courseInstructor} = course
 console.log(courseInstructor)
 
 //json
-
 {
     "people": [
       {
