@@ -37,6 +37,13 @@
 // console.log(Name)
 // console.log(bike)
 
+// array destructruing
+
+const number1 = [2,3,4,5];
+const [a,b,c,d] = number1;
+
+console.log(a,b,c,d)
+
 //map
 // const number = [20,30,40,70,80];
 
@@ -123,25 +130,26 @@
 //     return num1 + num2
 // })
 
+
 // console.log(result)
 
 //async await
 
-const fetchData = async () => {
-    const api = await fetch('https://api.nasa.gov/planetary/earth/imagery')
-    const data = await api.json()
-    console.log(data)
-}
+// const fetchData = async () => {
+//     const api = await fetch('https://api.nasa.gov/planetary/earth/imagery')
+//     const data = await api.json()
+//     console.log(data)
+// }
 
-fetchData()
+// fetchData()
 
 //import / exports
 
-export const number = (n1,n2) => n1+n2
+// export const number = (n1,n2) => n1+n2
 
-const person = 'suman'
+// const person = 'suman'
 
-export default person
+// export default person
 
 
 

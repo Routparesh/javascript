@@ -16,43 +16,60 @@
 // var js = (function(n) {return n*n;}(10));
 // js
 
-function compare()
-{
-    let a=2;
-    const b=2;
-    if(a==b)
-        return true;
-    else
-        return false;
-}
+// function compare()
+// {
+//     let a=2;
+//     const b=2;
+//     if(a==b)
+//         return true;
+//     else
+//         return false;
+// }
 
-compare()
+// compare()
 
-var a=5 , b=1
-var obj = { a : 10 }
+// var a=5 , b=1
+// var obj = { a : 10 }
  
 
-console.log(obj.a)
+// console.log(obj.a)
 
-var js = 0;
-while (js < 10) 
-{
-    console.log(js);
-    js++;
-}
+// var js = 0;
+// while (js < 10) 
+// {
+//     console.log(js);
+//     js++;
+// }
 
-var a=0;
-for(a;a<5;a++);
-console.log(a);
+// var a=0;
+// for(a;a<5;a++);
+// console.log(a);
 
 
-function compare()
-{
-    var a=1;
-    var b=1;
-    if(a.toString()===b)
-        return true;
-    else 
-        return false;
-}
+// function compare()
+// {
+//     var a=1;
+//     var b=1;
+//     if(a.toString()===b)
+//         return true;
+//     else 
+//         return false;
+// }
 
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+// Only change code below this line
+const wordBlanks = "It was really "+ myAdjective+ " " + myNoun + ", and we "+ myVerb+ " " + myAdverb
++'.'; // Change this line
+// Only change code above this line
+console.log(wordBlanks)
+
+
+const a = [2,3,67,7,8]
+
+const  [x,y,z] = a;
+
+console.log(x)
