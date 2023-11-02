@@ -73,3 +73,18 @@ const a = [2,3,67,7,8]
 const  [x,y,z] = a;
 
 console.log(x)
+
+function testLogicalOr(val) {
+    // Only change code below this line
+  
+   if(val<=10 || val>=20){
+     return 'Outside'
+   }else{
+     return 'Inside'
+   }
+  
+    // Only change code above this line
+    return "Inside";
+  }
+  
+console.log(testLogicalOr(15));
