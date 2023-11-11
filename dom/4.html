@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Edit_Remove</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    <script>
+        function addLanguage(langName) {
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`;
+            document.querySelector('.language').appendChild(li);
+        }
+
+        addLanguage('python');
+        addLanguage('TypeScript');
+
+        function addOptLanguage(langname) {
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langname));
+            document.querySelector('.language').appendChild(li);
+        }
+
+        addLanguage('GoLang');
+
+        //Edit
+        const secondLang = document.querySelector('li:nth-child(2)');
+        const newLi = document.createElement('li');
+        newLi.textContent = 'Ruby';
+        secondLang.replaceWith(newLi)
+
+        //edit
+        const thirdLang = document.querySelector('li:nth-child(3)');
+        thirdLang.outerHTML = '<li>NodeJs</li>'
+
+        //remove
+        const lastLang = document.querySelector('li:last-child');
+        lastLang.remove()
+    </script>
+</body>
+
+</html>
