@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+
+<body>
+    <h2>Amazing photo</h2>
+    <ul id="images">
+        <li><img src="https://images.pexels.com/photos/2283493/pexels-photo-2283493.jpeg?auto=compress&cs=tinysrgb&w=200"
+                id="first" alt=""></li>
+        <li><img src="https://images.pexels.com/photos/19028574/pexels-photo-19028574/free-photo-of-people-holding-palestinian-flags-protesting-on-the-street.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt=""></li>
+        <li><img src="https://images.pexels.com/photos/18968160/pexels-photo-18968160/free-photo-of-turkish-flag-hanging-on-a-building.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt=""></li>
+        <li><img src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt=""></li>
+        <li><img src="https://images.pexels.com/photos/358532/pexels-photo-358532.jpeg?auto=compress&cs=tinysrgb&w=200"
+                alt=""></li>
+        <li><a href="https://www.google.com/" id="google">Google</a></li>
+    </ul>
+    <script>
+        // document.getElementById("images").addEventListener("click", function (e) {
+        //     console.log('ul clicked')
+        // }, false)
+
+        // document.getElementById("first").addEventListener("click", function (e) {
+        //     e.stopPropagation()
+        //     console.log('nature clicked')
+        // }, false)
+
+        // document.getElementById('google').addEventListener("click", function (e) {
+        //     console.log('google clicked')
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        // }, false)
+
+        document.querySelector('#images').addEventListener('click', function (e) {
+            console.log(e.target.parentNode);
+
+            if (e.target.tagName === 'IMG') {
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+                console.log(e.target.id)
+            }
+
+            // removeIt.parentNode.removeChild(removeIt)
+        }, false)
+
+
+
+
+
+
+
+
+        //type, timestamp , defaultPrevented
+        //target, toElement, srcElement, currentTarget,
+        //clientX, clientY, screenX, screenY
+        //altkey, ctrlKey, shiftKey, keyCode
+    </script>
+</body>
+
+</html>
