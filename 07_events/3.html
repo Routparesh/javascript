@@ -13,16 +13,19 @@
     <button id="stop">Stop</button>
     <script>
 
-        const chageMe = function () {
+        let chageMe = function () {
             console.log('hi')
         }
+
+        let intervalId;
+
         document.querySelector("#start").addEventListener("click", function () {
-            // setInterval(chageMe, 1000)
-            // console.log(chageMe)
+            intervalId = setInterval(chageMe, 1000)
+            console.log(intervalId)
         })
 
         document.querySelector("#stop").addEventListener("click", function () {
-            clearInterval(chageMe);
+            clearInterval(intervalId);
             console.log('stopped')
         })
     </script>
