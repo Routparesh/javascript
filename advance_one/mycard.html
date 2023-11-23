@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        #img-dog {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            border-radius: 50px;
+            margin: 50px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100px;
+            margin: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img id="img-dog" alt="">
+        <button>Followers</button>
+    </div>
+
+    <script>
+
+        var img = document.querySelector('#img-dog');
+        var button = document.querySelector('button');
+        const url = 'https://api.github.com/users/routparesh';
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.onreadystatechange = function () {
+            const data = JSON.parse(xhr.responseText);
+            img.src = data.avatar_url;
+            button.addEventListener('click', function () {
+                button.innerHTML = data.followers;
+            })
+        }
+
+        xhr.send();
+
+    </script>
+</body>
+
+</html>
