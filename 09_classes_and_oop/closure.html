@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+
+<body>
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <script>
+        function init() {
+            let name = "Mozilla";
+            function displayName() {
+                console.log(name);
+                let love = 'bapu';
+                displayName();
+            }
+
+            function myName() {
+                console.log(name);
+                console.log(love)
+            }
+
+            myName();
+        }
+        init();
+
+    </script>
+
+    <script>
+        document.getElementById('orange').onclick = clickHandeler('orange')
+        document.getElementById('green').onclick = clickHandeler('green')
+
+        function clickHandeler(color) {
+            return function () {
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+    </script>
+</body>
+
+</html>
